@@ -58,37 +58,6 @@ p {
   color: rgb(78, 78, 78);
 }
 
-.heading {
-  grid-area: heading;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-.heading button {
-  border: 1px solid #000000;
-  padding: 7px 17px;
-  border-radius: 20px;
-  font-size: 12px;
-  color: black;
-}
-
-.midTxt1 {
-  grid-area: midTxt1;
-}
-.midTxt1 h1 {
-  width: 30vw;
-  font-weight: 400;
-}
-
-.midTxt2 {
-  grid-area: midTxt2;
-  width: 80%;
-  margin-left: auto;
-}
-.midTxt2 p {
-  width: 100%;
-}
-
 main #hero {
   width: 70vw;
   margin: auto;
@@ -318,6 +287,37 @@ main #services #second div:hover button i {
   color: black;
 }
 
+.heading {
+  grid-area: heading;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.heading button {
+  border: 1px solid #000000;
+  padding: 7px 17px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: black;
+}
+
+.midTxt1 {
+  grid-area: midTxt1;
+}
+.midTxt1 h1 {
+  width: 30vw;
+  font-weight: 400;
+}
+
+.midTxt2 {
+  grid-area: midTxt2;
+  width: 80%;
+  margin-left: auto;
+}
+.midTxt2 p {
+  width: 100%;
+}
+
 main #portfolio {
   width: 70vw;
   margin: 15vh auto 0px auto;
@@ -435,4 +435,79 @@ main #logoipsum #right img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+
+main #blog {
+  width: 70vw;
+  margin: 15vh auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+main #blog .heading button {
+  padding: 7px 17px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+main #blog div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #blog div button {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+main #blog #cards {
+  display: flex;
+}
+main #blog #cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 33vw;
+  border-radius: 1vh;
+}
+main #blog #cards .card img {
+  width: 100%;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+main #blog #cards .card h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+main #blog #cards .card p {
+  font-size: 14px;
+  color: rgb(138, 138, 138);
+  width: 33vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main #blog #cards .card .profile {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "img h1" "img p";
+}
+main #blog #cards .card .profile img {
+  grid-area: img;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+main #blog #cards .card .profile h1 {
+  grid-area: h1;
+  font-size: 15px;
+  margin-left: 1vw;
+}
+main #blog #cards .card .profile p {
+  grid-area: p;
+  font-size: 13px;
+  margin-left: 1vw;
+  color: rgb(138, 138, 138);
 }/*# sourceMappingURL=style.css.map */
