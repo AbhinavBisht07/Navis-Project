@@ -24,6 +24,8 @@ main {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
 
 li {
@@ -510,4 +512,79 @@ main #blog #cards .card .profile p {
   font-size: 13px;
   margin-left: 1vw;
   color: rgb(138, 138, 138);
+}
+
+main #contactus {
+  width: 70vw;
+  height: 70vh;
+  margin: 15vh auto 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+main #contactus #contact {
+  width: 33vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main #contactus #contact .down {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+main #contactus #contact .down p {
+  font-size: 16px;
+}
+main #contactus #contact .down h1 {
+  font-size: 17px;
+  font-weight: 400;
+}
+main #contactus #contact .down ul {
+  display: flex;
+  gap: 2vw;
+}
+main #contactus #contact .down ul li a i {
+  font-size: 20px;
+}
+main #contactus #details {
+  width: 33vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main #contactus #details #inputs div {
+  display: grid;
+  gap: 2vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: "name email" "msg msg";
+}
+main #contactus #details #inputs div div {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+main #contactus #details #inputs div div input, main #contactus #details #inputs div div textarea {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border: 1px solid rgba(121, 121, 121, 0.442);
+}
+main #contactus #details #inputs div div:nth-child(1) {
+  grid-area: name;
+}
+main #contactus #details #inputs div div:nth-child(2) {
+  grid-area: email;
+}
+main #contactus #details #inputs div div:nth-child(3) {
+  grid-area: msg;
+}
+main #contactus #details #inputs div div:nth-child(3) textarea {
+  height: 45vh;
+  padding-top: 10px;
+  vertical-align: top;
+}
+main #contactus #details button {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
