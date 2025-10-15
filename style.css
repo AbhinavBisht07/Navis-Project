@@ -1,0 +1,438 @@
+@font-face {
+  font-family: geist;
+  src: url(./Geist-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: geist;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #0361F7;
+  padding: 9px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn1:hover {
+  color: white;
+  background-color: #0361F7;
+}
+
+.btn2 {
+  color: white;
+  background-color: #0361F7;
+}
+
+.btn2:hover {
+  background-color: rgba(15, 107, 255, 0.8980392157);
+}
+
+p {
+  font-size: 14px;
+  color: rgb(78, 78, 78);
+}
+
+.heading {
+  grid-area: heading;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.heading button {
+  border: 1px solid #000000;
+  padding: 7px 17px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: black;
+}
+
+.midTxt1 {
+  grid-area: midTxt1;
+}
+.midTxt1 h1 {
+  width: 30vw;
+  font-weight: 400;
+}
+
+.midTxt2 {
+  grid-area: midTxt2;
+  width: 80%;
+  margin-left: auto;
+}
+.midTxt2 p {
+  width: 100%;
+}
+
+main #hero {
+  width: 70vw;
+  margin: auto;
+  height: 100vh;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10vh 60vh 20vh;
+  grid-template-areas: "header header" "box1 box2" "bottom bottom";
+}
+main #hero header {
+  grid-area: header;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #hero header #logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+main #hero header #logo img {
+  width: 30px;
+}
+main #hero header #logo span {
+  font-size: 20px;
+  font-weight: 600;
+}
+main #hero header #anchors ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+main #hero header #anchors ul li a {
+  color: rgb(78, 78, 78);
+  font-size: 14px;
+}
+main #hero header .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main #hero #box1 {
+  grid-area: box1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4vh;
+}
+main #hero #box1 h1 {
+  font-weight: 400;
+  font-size: 50px;
+  width: 30vw;
+}
+main #hero #box1 p {
+  font-size: 14px;
+  width: 30vw;
+  color: rgb(78, 78, 78);
+}
+main #hero #box1 .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+main #hero #box1 .btns button {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+main #hero #box2 {
+  grid-area: box2;
+  width: 80%;
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main #hero #box2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+main #hero #bottom {
+  grid-area: bottom;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main #hero #bottom div h1 {
+  font-weight: 400;
+  font-size: 40px;
+}
+main #hero #bottom div p {
+  font-size: 14px;
+  color: rgb(147, 147, 147);
+}
+
+main #expertise {
+  width: 70vw;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15vh 1fr 80vh 10vh;
+  grid-template-areas: "heading heading" "midTxt1 midTxt2" "midImg midImg" "bot bot";
+}
+main #expertise #midImg {
+  grid-area: midImg;
+  width: 70vw;
+  height: 80vh;
+  border-radius: 15px;
+  margin: 0px auto;
+}
+main #expertise #midImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+main #expertise #bot {
+  grid-area: bot;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+main #expertise #bot button {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+main #services {
+  width: 70vw;
+  margin: 15vh auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+main #services .heading {
+  margin-bottom: 0px;
+}
+main #services #first {
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: space-between;
+}
+main #services #first .midTxt1 {
+  width: 30vw;
+}
+main #services #first .midTxt2 {
+  width: 30vw;
+}
+main #services #second {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main #services #second div {
+  transition: all 0.1s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+main #services #second div h1 {
+  width: 30vw;
+  font-size: 18px;
+  font-weight: 400;
+}
+main #services #second div div {
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
+}
+main #services #second div div p {
+  width: 25vw;
+}
+main #services #second div div button {
+  height: 40px;
+  width: 40px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+main #services #second div div button:hover {
+  transform: scale(1.1);
+  font-size: 20px;
+  padding: 5px 10px 5px 10px;
+}
+main #services #second div div button:active {
+  transform: scale(0.9);
+  font-size: 15px;
+}
+main #services #second div:hover {
+  background-color: #0361F7;
+}
+main #services #second div:hover h1 {
+  color: white;
+}
+main #services #second div:hover p {
+  color: white;
+}
+main #services #second div:hover button {
+  background-color: white;
+}
+main #services #second div:hover button i {
+  color: black;
+}
+
+main #portfolio {
+  width: 70vw;
+  margin: 15vh auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+main #portfolio .heading button {
+  padding: 7px 17px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+main #portfolio div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #portfolio div button {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+main #portfolio #projects {
+  margin-top: 5vh;
+  display: flex;
+}
+main #portfolio #projects .project {
+  width: 34vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5vh;
+}
+main #portfolio #projects .project img {
+  height: 80%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+main #portfolio #projects .project h1 {
+  margin: 0.5vh 0px 0vh 0px;
+  font-size: 19px;
+  font-weight: 400;
+}
+main #portfolio #projects .project p {
+  font-size: 13px;
+}
+main #portfolio #projects .project .capsules {
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+main #portfolio #projects .project .capsules span {
+  font-size: 14px;
+  background-color: #cfddfe;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+main #logoipsum {
+  width: 70vw;
+  margin: 15vh auto 0px auto;
+  height: 75vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+}
+main #logoipsum #left {
+  width: 30vw;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+}
+main #logoipsum #left #top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #logoipsum #left #top img {
+  width: 200px;
+}
+main #logoipsum #left #top span i {
+  color: #0361F7;
+  font-size: 25px;
+}
+main #logoipsum #left #mid p {
+  color: #000000;
+  font-size: 16px;
+}
+main #logoipsum #left #bot {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1vw;
+}
+main #logoipsum #left #bot h1 {
+  font-weight: 400;
+  font-size: 17px;
+}
+main #logoipsum #left #bot p {
+  font-size: 17px;
+  color: rgb(116, 116, 116);
+}
+main #logoipsum #right {
+  width: 34vw;
+  height: 80%;
+}
+main #logoipsum #right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */
