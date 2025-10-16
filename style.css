@@ -17,7 +17,6 @@ body {
 }
 
 main {
-  height: 100%;
   width: 100%;
 }
 
@@ -44,6 +43,11 @@ button {
 .btn1:hover {
   color: white;
   background-color: #0361F7;
+  transform: scale(1.1);
+}
+
+.btn1:active {
+  transform: scale(0.9);
 }
 
 .btn2 {
@@ -53,6 +57,11 @@ button {
 
 .btn2:hover {
   background-color: rgba(15, 107, 255, 0.8980392157);
+  transform: scale(1.1);
+}
+
+.btn2:active {
+  transform: scale(0.9);
 }
 
 p {
@@ -78,19 +87,29 @@ main #hero header {
   justify-content: space-between;
   align-items: center;
 }
-main #hero header #logo {
+main #hero header .logo {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
   gap: 5px;
 }
-main #hero header #logo img {
-  width: 30px;
+main #hero header .logo span {
+  width: 2.2rem;
+  height: 2.2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
-main #hero header #logo span {
+main #hero header .logo span img {
+  width: 3rem;
+  height: 3rem;
+}
+main #hero header .logo #navis {
+  width: auto;
   font-size: 20px;
   font-weight: 600;
+  color: black;
 }
 main #hero header #anchors ul {
   display: flex;
@@ -516,8 +535,7 @@ main #blog #cards .card .profile p {
 
 main #contactus {
   width: 70vw;
-  height: 70vh;
-  margin: 15vh auto 0px auto;
+  margin: 20vh auto 0px auto;
   display: flex;
   justify-content: space-between;
 }
@@ -534,6 +552,7 @@ main #contactus #contact .down {
 }
 main #contactus #contact .down p {
   font-size: 16px;
+  color: rgb(157, 157, 157);
 }
 main #contactus #contact .down h1 {
   font-size: 17px;
@@ -541,10 +560,19 @@ main #contactus #contact .down h1 {
 }
 main #contactus #contact .down ul {
   display: flex;
-  gap: 2vw;
+  gap: 0.8rem;
+}
+main #contactus #contact .down ul li {
+  transition: all 0.4s;
 }
 main #contactus #contact .down ul li a i {
-  font-size: 20px;
+  font-size: 16px;
+}
+main #contactus #contact .down ul li:hover {
+  transform: scale(1.4);
+}
+main #contactus #contact .down ul li:hover i {
+  color: rgb(91, 91, 91);
 }
 main #contactus #details {
   width: 33vw;
@@ -564,7 +592,8 @@ main #contactus #details #inputs div div {
   flex-direction: column;
   gap: 1vh;
 }
-main #contactus #details #inputs div div input, main #contactus #details #inputs div div textarea {
+main #contactus #details #inputs div div input,
+main #contactus #details #inputs div div textarea {
   border-radius: 20px;
   border: none;
   outline: none;
@@ -581,10 +610,138 @@ main #contactus #details #inputs div div:nth-child(3) {
   grid-area: msg;
 }
 main #contactus #details #inputs div div:nth-child(3) textarea {
-  height: 45vh;
+  height: 35vh;
   padding-top: 10px;
   vertical-align: top;
 }
 main #contactus #details button {
+  margin-top: 1vh;
   width: 100%;
+}
+
+main {
+  padding-bottom: 10px;
+}
+main footer {
+  width: 97vw;
+  margin: 15vh auto 0vh auto;
+  padding: 5vh 0vw 3vh 0vw;
+  border-radius: 10px;
+  background-color: #232323;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main footer #topArea {
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  margin: auto;
+}
+main footer #topArea #subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main footer #topArea #subscribe .logo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  cursor: pointer;
+}
+main footer #topArea #subscribe .logo span {
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+main footer #topArea #subscribe .logo span img {
+  width: 3.8rem;
+  height: 3.8rem;
+}
+main footer #topArea #subscribe .logo #navis {
+  width: auto;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+main footer #topArea #subscribe h1 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: white;
+}
+main footer #topArea #subscribe input {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+}
+main footer #topArea #subscribe button {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main footer #topArea .footLinks {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main footer #topArea .footLinks h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+}
+main footer #topArea .footLinks a {
+  color: white;
+  font-size: 12px;
+}
+main footer #topArea .footLinks a:hover {
+  text-decoration: underline;
+}
+main footer #botArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70vw;
+  margin: 5rem auto 1.5rem auto;
+}
+main footer #botArea #region {
+  display: flex;
+  gap: 0.2rem;
+}
+main footer #botArea #region i {
+  color: white;
+  cursor: pointer;
+}
+main footer #botArea #region i:hover {
+  color: rgb(130, 130, 130);
+}
+main footer #botArea #region p {
+  color: white;
+}
+main footer #botArea #copyright p {
+  color: white;
+}
+main footer #botArea #socials {
+  display: flex;
+  gap: 0.5rem;
+}
+main footer #botArea #socials a {
+  transition: all 0.3s ease;
+}
+main footer #botArea #socials a i {
+  color: white;
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: 1px solid rgb(107, 107, 107);
+}
+main footer #botArea #socials a i:hover {
+  color: rgb(196, 196, 196);
+}
+main footer #botArea #socials a:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */
