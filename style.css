@@ -17,7 +17,7 @@ body {
 }
 
 html {
-  font-size: clamp(8px, 1vw, 18px);
+  font-size: clamp(9px, 1vw, 18px);
 }
 
 main {
@@ -97,8 +97,8 @@ main #hero header .logo {
   gap: 5px;
 }
 main #hero header .logo span {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 40px;
+  height: 40px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -106,8 +106,8 @@ main #hero header .logo span {
   border-radius: 10px;
 }
 main #hero header .logo span img {
-  width: 3rem;
-  height: 3rem;
+  width: 100%;
+  height: 100%;
 }
 main #hero header .logo #navis {
   width: auto;
@@ -186,14 +186,20 @@ main #hero #bottom {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
-main #hero #bottom div h1 {
+main #hero #bottom #firsttwo,
+main #hero #bottom #secondtwo {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+main #hero #bottom #firsttwo div h1,
+main #hero #bottom #secondtwo div h1 {
   font-weight: 400;
   font-size: 40px;
 }
-main #hero #bottom div p {
+main #hero #bottom #firsttwo div p,
+main #hero #bottom #secondtwo div p {
   font-size: 14px;
   color: rgb(147, 147, 147);
 }
@@ -330,7 +336,7 @@ main #services #second div:hover button i {
   grid-area: midTxt1;
 }
 .midTxt1 h1 {
-  width: 30vw;
+  width: 40vw;
   font-weight: 400;
 }
 
@@ -484,6 +490,7 @@ main #blog div button {
 }
 main #blog #cards {
   display: flex;
+  align-items: flex-start;
 }
 main #blog #cards .card {
   display: flex;
@@ -595,8 +602,12 @@ main #contactus #details #inputs div div {
   flex-direction: column;
   gap: 1vh;
 }
+main #contactus #details #inputs div div label {
+  font-size: 14px;
+}
 main #contactus #details #inputs div div input,
 main #contactus #details #inputs div div textarea {
+  width: 100%;
   border-radius: 20px;
   border: none;
   outline: none;
@@ -653,8 +664,8 @@ main footer #topArea #subscribe .logo {
   cursor: pointer;
 }
 main footer #topArea #subscribe .logo span {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 40px;
+  height: 40px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -662,8 +673,8 @@ main footer #topArea #subscribe .logo span {
   border-radius: 10px;
 }
 main footer #topArea #subscribe .logo span img {
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 60px;
+  height: 60px;
 }
 main footer #topArea #subscribe .logo #navis {
   width: auto;
@@ -673,7 +684,7 @@ main footer #topArea #subscribe .logo #navis {
 }
 main footer #topArea #subscribe h1 {
   margin-top: 2rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 200;
   color: white;
 }
@@ -714,11 +725,15 @@ main footer #botArea {
 }
 main footer #botArea #region {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 0.2rem;
 }
 main footer #botArea #region i {
   color: white;
   cursor: pointer;
+  font-size: 1.5rem;
+  font-size: 20px;
 }
 main footer #botArea #region i:hover {
   color: rgb(130, 130, 130);
@@ -737,6 +752,7 @@ main footer #botArea #socials a {
   transition: all 0.3s ease;
 }
 main footer #botArea #socials a i {
+  font-size: 16px;
   color: white;
   padding: 0.4rem;
   border-radius: 50%;
@@ -766,6 +782,7 @@ main footer #botArea #socials a:hover {
     width: 15vw;
   }
   .midTxt1 h1 {
+    font-size: 2.5rem;
     width: 35vw;
   }
   .midTxt2 {
@@ -851,6 +868,14 @@ main footer #botArea #socials a:hover {
   main #hero #bottom div p {
     width: 15vw;
   }
+  .midTxt1 h1 {
+    font-size: 2.5rem;
+    width: 35vw;
+  }
+  .midTxt2 {
+    width: 90%;
+    margin-left: auto;
+  }
   main #expertise {
     width: 90vw;
   }
@@ -919,671 +944,159 @@ main footer #botArea #socials a:hover {
     width: 90vw;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
   main #hero {
-    width: 90vw;
-    margin: auto;
-    height: 100vh;
-    display: grid;
-    gap: 32px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10vh 60vh 20vh;
-    grid-template-areas: "header header" "box1 box2" "bottom bottom";
+    height: 150vh;
+    grid-template-rows: 20vh 30vh 50vh 30vh;
+    grid-template-areas: "header header" "box1 box1" "box2 box2" "bottom bottom";
   }
   main #hero header {
-    grid-area: header;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  main #hero header .logo {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-  }
-  main #hero header .logo span {
-    width: 2.2rem;
-    height: 2.2rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-  }
-  main #hero header .logo span img {
-    width: 3rem;
-    height: 3rem;
-  }
-  main #hero header .logo #navis {
-    width: auto;
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-  }
-  main #hero header #anchors ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
-  }
-  main #hero header #anchors ul li a {
-    color: rgb(78, 78, 78);
-    font-size: 14px;
-  }
-  main #hero header .btns {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
   }
   main #hero #box1 {
-    grid-area: box1;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4vh;
+    gap: 2vh;
   }
   main #hero #box1 h1 {
-    font-weight: 400;
-    font-size: 4rem;
-    width: 40vw;
+    font-size: 3.5rem;
+    width: 80vw;
   }
   main #hero #box1 p {
-    font-size: 14px;
-    width: 40vw;
-    color: rgb(78, 78, 78);
+    font-size: 1.5rem;
+    width: 80vw;
   }
-  main #hero #box1 .btns {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-  }
-  main #hero #box1 .btns button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-  main #hero #box2 {
-    grid-area: box2;
-    width: 100%;
-    margin-left: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  main #hero #bottom #firsttwo,
+  main #hero #bottom #secondtwo {
+    flex-direction: column;
     align-items: center;
   }
-  main #hero #box2 img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 15px;
+  main #hero #bottom #firsttwo div,
+  main #hero #bottom #secondtwo div {
+    width: 30vw;
   }
-  main #hero #bottom {
-    grid-area: bottom;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0.5rem;
+  main #hero #bottom #firsttwo div h1,
+  main #hero #bottom #secondtwo div h1 {
+    font-size: 4rem;
   }
-  main #hero #bottom div h1 {
-    font-weight: 400;
-    font-size: 40px;
-  }
-  main #hero #bottom div p {
-    font-size: 14px;
-    color: rgb(147, 147, 147);
-    width: 15vw;
-  }
-  .heading {
-    grid-area: heading;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-  }
-  .heading button {
-    border: 1px solid #000000;
-    padding: 7px 17px;
-    border-radius: 20px;
-    font-size: 12px;
-    color: black;
-  }
-  .midTxt1 {
-    grid-area: midTxt1;
+  main #hero #bottom #firsttwo div p,
+  main #hero #bottom #secondtwo div p {
+    width: 80%;
+    font-size: 1.5rem;
   }
   .midTxt1 h1 {
-    width: 35vw;
-    font-weight: 400;
+    font-size: 2.5rem;
+    width: 100%;
   }
   .midTxt2 {
-    grid-area: midTxt2;
-    width: 90%;
-    margin-left: auto;
-  }
-  .midTxt2 p {
     width: 100%;
   }
   main #expertise {
-    width: 90vw;
-    margin: auto;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 15vh 1fr 80vh 10vh;
-    grid-template-areas: "heading heading" "midTxt1 midTxt2" "midImg midImg" "bot bot";
-  }
-  main #expertise #midImg {
-    grid-area: midImg;
-    width: 90vw;
-    height: 80vh;
-    border-radius: 15px;
-    margin: 0px auto;
-  }
-  main #expertise #midImg img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 15px;
-  }
-  main #expertise #bot {
-    grid-area: bot;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  main #expertise #bot button {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-  main #services {
-    width: 90vw;
-    margin: 15vh auto 0px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-  }
-  main #services .heading {
-    margin-bottom: 0px;
-  }
-  main #services #first {
-    margin-bottom: 5vh;
-    display: flex;
-    justify-content: space-between;
-  }
-  main #services #first .midTxt1 {
-    width: 40vw;
-  }
-  main #services #first .midTxt2 {
-    width: 40vw;
-  }
-  main #services #second {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 1fr 1fr 80vh 10vh;
+    grid-template-areas: "heading" "midTxt1" "midTxt2" "midImg" "bot";
   }
   main #services #second div {
-    transition: all 0.1s ease;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     align-items: center;
-    padding: 10px;
-    border-radius: 20px;
   }
   main #services #second div h1 {
-    width: 40vw;
-    font-size: 18px;
-    font-weight: 400;
+    width: 100%;
   }
   main #services #second div div {
-    display: flex;
-    justify-content: space-between;
-    gap: 3vw;
-  }
-  main #services #second div div p {
-    width: 35vw;
-  }
-  main #services #second div div button {
-    height: 40px;
-    width: 40px;
-    padding: 5px 10px 5px 10px;
-    border-radius: 50%;
-    font-size: 18px;
-  }
-  main #services #second div div button:hover {
-    transform: scale(1.1);
-    font-size: 20px;
-    padding: 5px 10px 5px 10px;
-  }
-  main #services #second div div button:active {
-    transform: scale(0.9);
-    font-size: 15px;
-  }
-  main #services #second div:hover {
-    background-color: #0361F7;
-  }
-  main #services #second div:hover h1 {
-    color: white;
-  }
-  main #services #second div:hover p {
-    color: white;
-  }
-  main #services #second div:hover button {
-    background-color: white;
-  }
-  main #services #second div:hover button i {
-    color: black;
-  }
-  main #portfolio {
-    width: 90vw;
-    margin: 15vh auto 0px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-  }
-  main #portfolio .heading button {
-    padding: 7px 17px;
-    border-radius: 20px;
-    font-size: 12px;
-  }
-  main #portfolio div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  main #portfolio div button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-  main #portfolio #projects {
-    margin-top: 5vh;
-    display: flex;
-  }
-  main #portfolio #projects .project {
-    width: 44vw;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    width: 100%;
     gap: 1.5vh;
   }
-  main #portfolio #projects .project img {
-    height: 80%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 10px;
+  main #services #second div div p {
+    width: 90%;
   }
-  main #portfolio #projects .project h1 {
-    margin: 0.5vh 0px 0vh 0px;
-    font-size: 19px;
-    font-weight: 400;
-  }
-  main #portfolio #projects .project p {
-    font-size: 13px;
-  }
-  main #portfolio #projects .project .capsules {
-    justify-content: center;
-    align-items: center;
-    gap: 0.5vw;
-  }
-  main #portfolio #projects .project .capsules span {
-    font-size: 1.2rem;
-    background-color: #cfddfe;
+  main #services #second div div button {
+    width: 100px;
     border-radius: 20px;
-    padding: 5px 10px;
+  }
+  main #portfolio div#seemorebtn .midTxt1 h1 {
+    width: 60vw;
+  }
+  main #portfolio div#seemorebtn button {
+    font-size: 12px;
+    padding: 8px 18px;
+  }
+  main #portfolio #projects {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  main #portfolio #projects .project {
+    width: 80vw;
+    height: auto;
+  }
+  main #portfolio #projects .project img {
+    height: 60%;
   }
   main #logoipsum {
-    width: 90vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2vw;
+    flex-direction: column;
+    gap: 4rem;
   }
   main #logoipsum #left {
-    width: 40vw;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 8vh;
-  }
-  main #logoipsum #left #top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  main #logoipsum #left #top img {
-    width: 170px;
-  }
-  main #logoipsum #left #top span i {
-    color: #0361F7;
-    font-size: 18px;
-  }
-  main #logoipsum #left #mid p {
-    color: #000000;
-    font-size: 16px;
-  }
-  main #logoipsum #left #bot {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1vw;
-  }
-  main #logoipsum #left #bot h1 {
-    font-weight: 400;
-    font-size: 17px;
-  }
-  main #logoipsum #left #bot p {
-    font-size: 17px;
-    color: rgb(116, 116, 116);
+    width: 90vw;
+    gap: 2rem;
   }
   main #logoipsum #right {
-    width: 45vw;
-    height: 80%;
-  }
-  main #logoipsum #right img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 10px;
-  }
-  main #blog {
-    width: 90vw;
-    margin: 15vh auto 0px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 4vh;
-  }
-  main #blog .heading button {
-    padding: 7px 17px;
-    border-radius: 20px;
-    font-size: 12px;
-  }
-  main #blog div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  main #blog div button {
-    font-size: 14px;
-    padding: 10px 20px;
+    width: 80vw;
   }
   main #blog #cards {
-    display: flex;
-  }
-  main #blog #cards .card {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: 43vw;
-    border-radius: 1vh;
-  }
-  main #blog #cards .card img {
-    width: 100%;
-    height: 50vh;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 10px;
-  }
-  main #blog #cards .card h1 {
-    font-size: 20px;
-    font-weight: 400;
-  }
-  main #blog #cards .card p {
-    font-size: 14px;
-    color: rgb(138, 138, 138);
-    width: 43vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  main #blog #cards .card .profile {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "img h1" "img p";
-  }
-  main #blog #cards .card .profile img {
-    grid-area: img;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  main #blog #cards .card .profile h1 {
-    grid-area: h1;
-    font-size: 15px;
-    margin-left: 1vw;
-  }
-  main #blog #cards .card .profile p {
-    grid-area: p;
-    font-size: 13px;
-    margin-left: 1vw;
-    color: rgb(138, 138, 138);
-  }
-  main #contactus {
-    width: 90vw;
-    margin: 20vh auto 0px auto;
-    display: flex;
-    justify-content: space-between;
-  }
-  main #contactus #contact {
-    width: 43vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  main #contactus #contact .down {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-  }
-  main #contactus #contact .down p {
-    font-size: 16px;
-    color: rgb(157, 157, 157);
-  }
-  main #contactus #contact .down h1 {
-    font-size: 17px;
-    font-weight: 400;
-  }
-  main #contactus #contact .down ul {
-    display: flex;
-    gap: 0.8rem;
-  }
-  main #contactus #contact .down ul li {
-    transition: all 0.4s;
-  }
-  main #contactus #contact .down ul li a i {
-    font-size: 16px;
-  }
-  main #contactus #contact .down ul li:hover {
-    transform: scale(1.4);
-  }
-  main #contactus #contact .down ul li:hover i {
-    color: rgb(91, 91, 91);
-  }
-  main #contactus #details {
-    width: 43vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  main #contactus #details #inputs div {
-    display: grid;
-    gap: 2vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 4fr;
-    grid-template-areas: "name email" "msg msg";
-  }
-  main #contactus #details #inputs div div {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-  }
-  main #contactus #details #inputs div div input,
-  main #contactus #details #inputs div div textarea {
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    padding: 10px;
-    border: 1px solid rgba(121, 121, 121, 0.442);
-  }
-  main #contactus #details #inputs div div:nth-child(1) {
-    grid-area: name;
-  }
-  main #contactus #details #inputs div div:nth-child(2) {
-    grid-area: email;
-  }
-  main #contactus #details #inputs div div:nth-child(3) {
-    grid-area: msg;
-  }
-  main #contactus #details #inputs div div:nth-child(3) textarea {
-    height: 35vh;
-    padding-top: 10px;
-    vertical-align: top;
-  }
-  main #contactus #details button {
-    margin-top: 1vh;
-    width: 100%;
-  }
-  main {
-    padding-bottom: 10px;
-  }
-  main footer {
-    width: 97vw;
-    margin: 15vh auto 0vh auto;
-    padding: 5vh 0vw 3vh 0vw;
-    border-radius: 10px;
-    background-color: #232323;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  main footer #topArea {
-    display: flex;
-    justify-content: space-between;
-    width: 90vw;
-    margin: auto;
-  }
-  main footer #topArea #subscribe {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  main footer #topArea #subscribe .logo {
-    display: flex;
-    justify-content: flex-start;
-    gap: 5px;
-    cursor: pointer;
-  }
-  main footer #topArea #subscribe .logo span {
-    width: 2.5rem;
-    height: 2.5rem;
-    overflow: hidden;
-    display: flex;
+    gap: 3vh;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
   }
-  main footer #topArea #subscribe .logo span img {
-    width: 3.8rem;
-    height: 3.8rem;
+  main #blog #cards .card {
+    width: 80vw;
   }
-  main footer #topArea #subscribe .logo #navis {
-    width: auto;
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
+  main #blog #cards .card p {
+    width: 80vw;
+  }
+  main #contactus {
+    flex-direction: column;
+    gap: 8vh;
+    justify-content: center;
+    align-items: center;
+  }
+  main #contactus #contact {
+    width: 80vw;
+    gap: 4vh;
+  }
+  main #contactus #details {
+    width: 80vw;
+  }
+  main #contactus #details #inputs div div label {
+    font-size: 14px;
+  }
+  main footer #topArea {
+    flex-wrap: wrap;
+    gap: 5rem;
+    width: 80vw;
   }
   main footer #topArea #subscribe h1 {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    font-weight: 200;
-    color: white;
-  }
-  main footer #topArea #subscribe input {
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-  }
-  main footer #topArea #subscribe button {
-    width: -moz-fit-content;
-    width: fit-content;
+    font-size: 2.2rem;
   }
   main footer #topArea .footLinks {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  main footer #topArea .footLinks h1 {
-    color: white;
-    font-weight: 400;
-    font-size: 15px;
-  }
-  main footer #topArea .footLinks a {
-    color: white;
-    font-size: 12px;
-  }
-  main footer #topArea .footLinks a:hover {
-    text-decoration: underline;
+    flex-shrink: 0;
+    width: 30vw;
   }
   main footer #botArea {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 70vw;
-    margin: 5rem auto 1.5rem auto;
-  }
-  main footer #botArea #region {
-    display: flex;
-    gap: 0.2rem;
+    width: 80vw;
+    width: 90vw;
   }
   main footer #botArea #region i {
-    color: white;
-    cursor: pointer;
-  }
-  main footer #botArea #region i:hover {
-    color: rgb(130, 130, 130);
+    font-size: 16px;
   }
   main footer #botArea #region p {
-    color: white;
+    font-size: 1.3rem;
   }
   main footer #botArea #copyright p {
-    color: white;
-  }
-  main footer #botArea #socials {
-    display: flex;
-    gap: 0.5rem;
-  }
-  main footer #botArea #socials a {
-    transition: all 0.3s ease;
+    font-size: 1.3rem;
   }
   main footer #botArea #socials a i {
-    color: white;
-    padding: 0.4rem;
-    border-radius: 50%;
-    border: 1px solid rgb(107, 107, 107);
-  }
-  main footer #botArea #socials a i:hover {
-    color: rgb(196, 196, 196);
-  }
-  main footer #botArea #socials a:hover {
-    transform: scale(1.2);
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
