@@ -116,15 +116,44 @@ main {
             justify-content: space-between;
             align-items: center;
 
+            // .logo {
+            //     display: flex;
+            //     justify-content: center;
+            //     gap: 5px;
 
-            .logo {
+            //     span {
+            //         width: 40px;
+            //         height: 40px;
+            //         overflow: hidden;
+            //         display: flex;
+            //         justify-content: center;
+            //         align-items: center;
+            //         border-radius: 10px;
+
+            //         img {
+            //             width: 100%;
+            //             height: 100%;
+            //             // object-fit: cover;
+            //         }
+            //     }
+
+            //     #navis {
+            //         width: auto;
+            //         font-size: 20px;
+            //         font-weight: 600;
+            //         color: black;
+            //     }
+            // }
+
+            .logo { //33333333333333333333333333333333333333333333333
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 gap: 5px;
+                cursor: pointer;
 
                 span {
-                    width: 40px;
-                    height: 40px;
+                    width: 35px;
+                    height: 35px;
                     overflow: hidden;
                     display: flex;
                     justify-content: center;
@@ -132,8 +161,8 @@ main {
                     border-radius: 10px;
 
                     img {
-                        width: 100%;
-                        height: 100%;
+                        width: 45px; //33333333333333333333333333333333
+                        height: 45px;//33333333333333333333333333333333
                         // object-fit: cover;
                     }
                 }
@@ -142,7 +171,7 @@ main {
                     width: auto;
                     font-size: 20px;
                     font-weight: 600;
-                    color: black;
+                    // color: white;
                 }
             }
 
@@ -837,10 +866,7 @@ main {
             }
         }
     }
-
-
 }
-
 
 main {
     // background-color: #ffd2d2;
@@ -956,24 +982,24 @@ main {
                 gap: 0.2rem;
 
                 i {
-                    color: white;
+                    color: rgb(171, 171, 171);;
                     cursor: pointer;
                     font-size: 1.5rem; //222222222222222222222222
                     font-size: 20px; //222222222222222222222222
                 }
 
                 i:hover {
-                    color: rgb(130, 130, 130);
+                    color: rgb(255, 255, 255);
                 }
 
                 p {
-                    color: white;
+                    color: rgb(171, 171, 171);;
                 }
             }
 
             #copyright {
                 p {
-                    color: white;
+                    color: rgb(171, 171, 171);
                 }
             }
 
@@ -986,7 +1012,7 @@ main {
 
                     i {
                         font-size: 16px; //22222222222222222222222222222222
-                        color: white;
+                        color: rgb(171, 171, 171);;
                         // background-color: grey;
                         padding: 0.4rem;
                         border-radius: 50%;
@@ -994,7 +1020,7 @@ main {
                     }
 
                     i:hover {
-                        color: rgb(196, 196, 196);
+                        color: rgb(255, 255, 255);
                     }
                 }
 
@@ -1372,35 +1398,48 @@ main {
     main {
         #hero {
             height: 150vh; //22222222222222222222222222222222222222222222
-            grid-template-rows: 20vh 30vh 50vh 30vh; //22222222222222222222
+            grid-template-rows: 25vh 30vh 50vh 30vh; //22222222222222222222
             grid-template-areas: "header header" //2222222222222222222222
                 "box1 box1" //22222222222222222222222222222222222222222
                 "box2 box2" //222222222222222222222222222222222222222
                 "bottom bottom"; //2222222222222222222222222222222222
+
             header {
                 flex-direction: column; //222222222222222222222222222222222
+                padding: 2vh; //33333333333333333333333333333333333333333
+                margin-top: 10px; //33333333333333333333333333333333333333
+                background-color: #ddeaff; ///3333333333333333333333333
+                border-radius: 10px; //33333333333333333333333333333333333
             }
+
             #box1 {
                 gap: 2vh; ////2222222222222222222222222222222222222222
+
                 h1 {
                     font-size: 3.5rem; //22222222222222222222222222222222222
                     width: 80vw; //22222222222222222222222222222222222222222
                 }
+
                 p {
                     font-size: 1.5rem; //22222222222222222222222222222222222
                     width: 80vw; //2222222222222222222222222222222222222222
                 }
             }
+
             #bottom {
+
                 #firsttwo,
                 #secondtwo {
                     flex-direction: column; //2222222222222222222222222222222222222
                     align-items: center; //2222222222222222222222222222222222222222
+
                     div {
                         width: 30vw; //2222222222222222222222222222222222222222222
+
                         h1 {
                             font-size: 4rem; //222222222222222222222222222222222
                         }
+
                         p {
                             width: 80%; //222222222222222222222222222222222222222
                             font-size: 1.5rem; //222222222222222222222222222222222
@@ -1424,13 +1463,14 @@ main {
     .midTxt2 {
         width: 100%; //222222222222222222222222222222222222222
     }
+
     // Universal end
 
     main {
         #expertise {
             grid-template-columns: 1fr; //222222222222222222222222222222 
             grid-template-rows: 15vh 1fr 1fr 80vh 10vh; //2222222222222
-            grid-template-areas: "heading"  //2222222222222222222222222
+            grid-template-areas: "heading" //2222222222222222222222222
                 "midTxt1"
                 "midTxt2"
                 "midImg"
@@ -1446,15 +1486,19 @@ main {
                     justify-content: flex-start; //2222222222222222222222
                     align-items: flex-start; //222222222222222222222222222
                     align-items: center; //22222222222222222222222222222
+
                     h1 {
                         width: 100%; //2222222222222222222222222222222222
                     }
+
                     div {
                         width: 100%; //2222222222222222222222222222222222
                         gap: 1.5vh; //222222222222222222222222222222222222
+
                         p {
                             width: 90%; //2222222222222222222222222222
                         }
+
                         button {
                             width: 100px; //222222222222222222222222
                             border-radius: 20px; //2222222222222222222
@@ -1473,11 +1517,13 @@ main {
                         width: 60vw; //2222222222222222222222222222
                     }
                 }
+
                 button {
                     font-size: 12px; ///222222222222222222222222222222222222222
                     padding: 8px 18px; //2222222222222222222222222222222222222
                 }
             }
+
             #projects {
                 flex-direction: column; //222222222222222222222222222222222222
                 gap: 4rem; //222222222222222222222222222222222222222222
@@ -1498,10 +1544,12 @@ main {
         #logoipsum {
             flex-direction: column; //2222222222222222222222222222222222222222222
             gap: 4rem; //222222222222222222222222222222222222222222222222222222
+
             #left {
                 width: 90vw; //222222222222222222222222222222222222222222222222
                 gap: 2rem; //2222222222222222222222222222222222222222222222222222
             }
+
             #right {
                 width: 80vw; //2222222222222222222222222222222222222
             }
@@ -1517,8 +1565,10 @@ main {
                 gap: 3vh; //2222222222222222222222222222222222222
                 justify-content: center; //22222222222222222222222
                 align-items: center; //222222222222222222222222222
+
                 .card {
                     width: 80vw; //2222222222222222222222222222222222
+
                     p {
                         width: 80vw; //2222222222222222222222222222222
                     }
@@ -1534,12 +1584,15 @@ main {
             gap: 8vh; //222222222222222222222222222222222222222222222
             justify-content: center; //222222222222222222222222222
             align-items: center; //2222222222222222222222222222222
+
             #contact {
                 width: 80vw; //222222222222222222222222222222222222222222
                 gap: 4vh; //22222222222222222222222222222222222222222222
             }
+
             #details {
                 width: 80vw; //22222222222222222222222222222222222222222222
+
                 #inputs {
                     div {
                         div {
@@ -1560,32 +1613,39 @@ main {
                 flex-wrap: wrap; //222222222222222222222222222222222222222
                 gap: 5rem; //2222222222222222222222222222222222222222222
                 width: 80vw; //222222222222222222222222222222222222222222
+
                 #subscribe {
                     h1 {
                         font-size: 2.2rem; //2222222222222222222222
                     }
                 }
+
                 .footLinks {
                     flex-shrink: 0; //222222222222222222222222222222222222
                     width: 30vw; //2222222222222222222222222222222222222222
                 }
             }
+
             #botArea {
                 width: 80vw; //22222222222222222222222222222222222222222
                 width: 90vw; //22222222222222222222222222222222222222222
+
                 #region {
                     i {
                         font-size: 16px; //2222222222222222222222222222222
                     }
+
                     p {
                         font-size: 1.3rem; //222222222222222222222222222222
                     }
                 }
+
                 #copyright {
                     p {
                         font-size: 1.3rem; //2222222222222222222222222222222
                     }
                 }
+
                 #socials {
                     a {
                         i {
@@ -1607,6 +1667,17 @@ main {
 
 @media (max-width:450px) {
 
+
+    button {
+        cursor: pointer;
+        border: 1px solid #0361F7;
+        padding: 7px 18px; //333333333333333333333333333333333333333333333333
+        border-radius: 20px;
+        font-size: 12px;
+        transition: all 0.2s ease;
+    }
+
+
     main {
         #hero {
             width: 90vw; //111111111111111111111111111111111111111111111
@@ -1615,7 +1686,7 @@ main {
             display: grid;
             gap: 32px;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 20vh 30vh 50vh 30vh; //22222222222222222222
+            grid-template-rows: 25vh 30vh 50vh 30vh; //22222222222222222222
             grid-template-areas: "header header" //2222222222222222222222
                 "box1 box1" //22222222222222222222222222222222222222222
                 "box2 box2" //222222222222222222222222222222222222222
@@ -1628,6 +1699,10 @@ main {
 
                 display: flex;
                 flex-direction: column; //222222222222222222222222222222222
+                padding: 3vh 1vw; //333333333333333333333333333333333333333333
+                margin-top: 10px; //33333333333333333333333333333333333333
+                background-color: #ddeaff; ///3333333333333333333333333
+                border-radius: 10px; //33333333333333333333333333333333333
                 // justify-content: space-between;
                 // justify-content: center;
                 // align-items: center;
@@ -1674,7 +1749,7 @@ main {
 
                             a {
                                 color: rgb(78, 78, 78);
-                                font-size: 14px
+                                font-size: 13px; //33333333333333333333333333333333333333333333
                             }
                         }
                     }
@@ -1699,12 +1774,15 @@ main {
                 h1 {
                     font-weight: 400;
                     font-size: 3.5rem; //22222222222222222222222222222222222
+                    font-size: 3rem; //33333333333333333333333333333333333
                     width: 80vw; //22222222222222222222222222222222222222222
+                    width: 100%; //3333333333333333333333333333333333333333
                 }
 
                 p {
                     font-size: 1.5rem; //22222222222222222222222222222222222
                     width: 80vw; ////2222222222222222222222222222222222222222
+                    width: 100%; //333333333333333333333333333333333333333333
                     color: rgb(78, 78, 78);
                 }
 
@@ -1714,8 +1792,8 @@ main {
                     gap: 15px;
 
                     button {
-                        font-size: 14px;
-                        padding: 10px 20px;
+                        font-size: 12px; //3333333333333333333333333333333333333
+                        padding: 8px 18px; //33333333333333333333333333333333333
                     }
                 }
             }
@@ -1746,21 +1824,26 @@ main {
                     width: 100%;
                     display: flex;
                     flex-direction: column; //2222222222222222222222222222222222222
-                    // justify-content: center;
+                    justify-content: flex-start; //33333333333333333333333333333333
+                    gap: 15px;
                     align-items: center; //2222222222222222222222222222222222222222
 
                     div {
                         // background-color: red;
                         width: 30vw; //2222222222222222222222222222222222222222222
+                        width: 35vw; //3333333333333333333333333333333333333333333
 
                         h1 {
                             font-weight: 400;
                             font-size: 4rem; //222222222222222222222222222222222
+                            font-size: 3rem; //333333333333333333333333333333333
                         }
 
                         p {
                             width: 80%; //222222222222222222222222222222222222222
+                            width: 80%; //333333333333333333333333333333333333333
                             font-size: 1.5rem; //222222222222222222222222222222222
+                            font-size: 1.3rem; //333333333333333333333333333333333
                             color: rgb(147, 147, 147);
                         }
                     }
@@ -1794,6 +1877,7 @@ main {
 
         h1 {
             font-size: 2.5rem; //222222222222222222222222222222222
+            font-size: 2.3rem; //333333333333333333333333333333333
             width: 100%; //2222222222222222222222222222222222222
             font-weight: 400;
         }
@@ -1822,7 +1906,8 @@ main {
             gap: 10px;
             grid-template-columns: 1fr 1fr;
             grid-template-columns: 1fr; //222222222222222222222222222222 
-            grid-template-rows: 15vh 1fr 1fr 80vh 10vh; //2222222222222
+            grid-template-rows: 15vh 1fr 1fr 50vh 10vh; //2222222222222
+            grid-template-rows: 15vh 0.7fr 1fr 50vh 10vh; //33333333333333333333333333333333
             grid-template-areas: "heading" //2222222222222222222222222
                 "midTxt1"
                 "midTxt2"
@@ -1831,7 +1916,9 @@ main {
 
             // .heading {}
 
-            // .midTxt1 {}
+            // .midTxt1 {
+            //     // background-color: red;
+            // }
 
             // .midTxt2 {}
 
@@ -1839,6 +1926,7 @@ main {
                 grid-area: midImg;
                 width: 90vw; //1111111111111111111111111111111111111111
                 height: 80vh;
+                height: 50vh; //333333333333333333333333333333333333333333333333333333
                 border-radius: 15px;
                 margin: 0px auto;
 
@@ -1858,7 +1946,9 @@ main {
 
                 button {
                     font-size: 16px;
+                    font-size: 14px;//3333333333333333333333333333333333333333
                     padding: 10px 20px;
+                    padding: 8px 18px;//33333333333333333333333333333333333333
                 }
             }
         }
@@ -1882,14 +1972,17 @@ main {
             #first {
                 margin-bottom: 5vh;
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column; //3333333333333333333333333333333333333333
+                justify-content: flex-start; //33333333333333333333333333333333333
 
                 .midTxt1 {
                     width: 40vw; //111111111111111111111111111111111111111
+                    width: 100%; //33333333333333333333333333333333333333
                 }
 
                 .midTxt2 {
                     width: 40vw; //1111111111111111111111111111111111111111
+                    width: 100%; //3333333333333333333333333333333333333333
                 }
             }
 
@@ -1916,6 +2009,7 @@ main {
                         width: 40vw; //1111111111111111111111111111111111
                         width: 100%; //2222222222222222222222222222222222
                         font-size: 18px;
+                        font-size: 16px; //333333333333333333333333333333333333333333333333
                         font-weight: 400;
                     }
 
@@ -1927,15 +2021,18 @@ main {
                         gap: 1.5vh; //222222222222222222222222222222222222
 
                         p {
+                            font-size: 12px; //33333333333333333333333333333333333333333333
                             width: 90%; //2222222222222222222222222222
                             color: rgb(156, 156, 156);
                         }
 
                         button {
-                            height: 40px;
+                            height: 50px;
                             width: 100px; //222222222222222222222222
+                            width: 50px; //333333333333333333333333333333333333333333333
                             padding: 5px 10px 5px 10px;
                             border-radius: 20px; //2222222222222222222
+                            border-radius: 50%; //333333333333333333333333333333333333
                             font-size: 18px;
                         }
 
@@ -2022,6 +2119,7 @@ main {
 
                 .project {
                     width: 80vw; //222222222222222222222222222222222222222222
+                    width: 90vw; //333333333333333333333333333333333333333333
                     height: auto; //2222222222222222222222222222222222222222
 
                     display: flex;
@@ -2054,6 +2152,7 @@ main {
 
                         span {
                             font-size: 1.2rem; //11111111111111111111111111111
+                            font-size: 1.1rem; //333333333333333333333333333333333333333333333
                             background-color: #cfddfe;
                             border-radius: 20px;
                             padding: 5px 10px;
@@ -2105,6 +2204,7 @@ main {
                     p {
                         color: #000000;
                         font-size: 16px;
+                        font-size: 13px; //33333333333333333333333333333333333333333333333
                     }
                 }
 
@@ -2112,7 +2212,7 @@ main {
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
-                    gap: 1vw;
+                    gap: 3vw; //33333333333333333333333333333333333333333333333333
 
                     h1 {
                         font-weight: 400;
@@ -2129,6 +2229,7 @@ main {
             #right {
                 width: 45vw; //111111111111111111111111111111
                 width: 80vw; //2222222222222222222222222222222222222
+                width: 90vw; //333333333333333333333333333333333333333333333
                 height: 80%;
 
                 img {
@@ -2165,8 +2266,11 @@ main {
                 align-items: center;
 
                 button {
+                    width: 30vw; //3333333333333333333333333333333333333333333
                     font-size: 14px;
+                    font-size: 12px; //333333333333333333333333333333333333333
                     padding: 10px 20px;
+                    padding: 8px 18px; //33333333333333333333333333333333333333
                 }
             }
 
@@ -2174,6 +2278,7 @@ main {
                 display: flex;
                 flex-direction: column; //2222222222222222222222
                 gap: 3vh; //2222222222222222222222222222222222222
+                gap: 6vh; //33333333333333333333333333333333333333333333333333333
                 justify-content: center; //22222222222222222222222
                 align-items: center; //222222222222222222222222222
 
@@ -2185,6 +2290,7 @@ main {
                     gap: 10px;
                     width: 43vw; //11111111111111111111111111111111111 
                     width: 80vw; //2222222222222222222222222222222222
+                    width: 90vw; //33333333333333333333333333333333333333333333
                     border-radius: 1vh;
 
                     img {
@@ -2195,7 +2301,7 @@ main {
                     }
 
                     h1 {
-                        font-size: 20px;
+                        font-size: 18px; //333333333333333333333333333333333333333333
                         font-weight: 400;
                     }
 
@@ -2203,6 +2309,7 @@ main {
                         font-size: 14px;
                         color: rgb(138, 138, 138);
                         width: 80vw; //2222222222222222222222222222222
+                        width: 90vw; //3333333333333333333333333333333333333333333333
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
@@ -2266,12 +2373,12 @@ main {
                     gap: 1vh;
 
                     p {
-                        font-size: 16px;
+                        font-size: 15px; //3333333333333333333333333333333333333333333
                         color: rgb(157, 157, 157);
                     }
 
                     h1 {
-                        font-size: 17px;
+                        font-size: 15px; //333333333333333333333333333333333333333333
                         font-weight: 400;
                     }
 
@@ -2384,6 +2491,7 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 5vh; //3333333333333333333333333333333333333333333333333333333333333333333
 
             #topArea {
                 display: flex;
@@ -2476,9 +2584,11 @@ main {
             }
 
             #botArea {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
+                display: flex; 
+                flex-direction: column; //333333333333333333333333333333333333333
+                justify-content: center; //33333333333333333333333333333333333333
+                align-items: center; //333333333333333333333333333333333333333333
+                gap: 3vh; //3333333333333333333333333333333333333333333333333333333
                 width: 80vw; //22222222222222222222222222222222222222222
                 width: 90vw; //22222222222222222222222222222222222222222
                 margin: 5rem auto 1.5rem auto;
@@ -2489,24 +2599,24 @@ main {
 
                     i {
                         font-size: 16px; //2222222222222222222222222222222
-                        color: white;
+                        // color: white;
                         cursor: pointer;
                     }
 
                     i:hover {
-                        color: rgb(130, 130, 130);
+                        // color: rgb(130, 130, 130);
                     }
 
                     p {
-                        color: white;
+                        // color: white;
                         font-size: 1.3rem; //222222222222222222222222222222
                     }
                 }
 
                 #copyright {
                     p {
-                        font-size: 1.3rem;//2222222222222222222222222222222
-                        color: white;
+                        font-size: 1.3rem; //2222222222222222222222222222222
+                        // color: white;
                     }
                 }
 
@@ -2519,14 +2629,14 @@ main {
 
                         i {
                             font-size: 16px; //222222222222222222222222222222222
-                            color: white;
+                            // color: white;
                             padding: 0.4rem;
                             border-radius: 50%;
                             border: 1px solid rgb(107, 107, 107);
                         }
 
                         i:hover {
-                            color: rgb(196, 196, 196);
+                            // color: rgb(196, 196, 196);
                         }
                     }
 

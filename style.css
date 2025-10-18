@@ -93,12 +93,13 @@ main #hero header {
 }
 main #hero header .logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 5px;
+  cursor: pointer;
 }
 main #hero header .logo span {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -106,14 +107,13 @@ main #hero header .logo span {
   border-radius: 10px;
 }
 main #hero header .logo span img {
-  width: 100%;
-  height: 100%;
+  width: 45px;
+  height: 45px;
 }
 main #hero header .logo #navis {
   width: auto;
   font-size: 20px;
   font-weight: 600;
-  color: black;
 }
 main #hero header #anchors ul {
   display: flex;
@@ -730,19 +730,19 @@ main footer #botArea #region {
   gap: 0.2rem;
 }
 main footer #botArea #region i {
-  color: white;
+  color: rgb(171, 171, 171);
   cursor: pointer;
   font-size: 1.5rem;
   font-size: 20px;
 }
 main footer #botArea #region i:hover {
-  color: rgb(130, 130, 130);
+  color: rgb(255, 255, 255);
 }
 main footer #botArea #region p {
-  color: white;
+  color: rgb(171, 171, 171);
 }
 main footer #botArea #copyright p {
-  color: white;
+  color: rgb(171, 171, 171);
 }
 main footer #botArea #socials {
   display: flex;
@@ -753,13 +753,13 @@ main footer #botArea #socials a {
 }
 main footer #botArea #socials a i {
   font-size: 16px;
-  color: white;
+  color: rgb(171, 171, 171);
   padding: 0.4rem;
   border-radius: 50%;
   border: 1px solid rgb(107, 107, 107);
 }
 main footer #botArea #socials a i:hover {
-  color: rgb(196, 196, 196);
+  color: rgb(255, 255, 255);
 }
 main footer #botArea #socials a:hover {
   transform: scale(1.2);
@@ -947,11 +947,15 @@ main footer #botArea #socials a:hover {
 @media (max-width: 768px) {
   main #hero {
     height: 150vh;
-    grid-template-rows: 20vh 30vh 50vh 30vh;
+    grid-template-rows: 25vh 30vh 50vh 30vh;
     grid-template-areas: "header header" "box1 box1" "box2 box2" "bottom bottom";
   }
   main #hero header {
     flex-direction: column;
+    padding: 2vh;
+    margin-top: 10px;
+    background-color: #ddeaff;
+    border-radius: 10px;
   }
   main #hero #box1 {
     gap: 2vh;
@@ -1101,6 +1105,14 @@ main footer #botArea #socials a:hover {
   }
 }
 @media (max-width: 450px) {
+  button {
+    cursor: pointer;
+    border: 1px solid #0361F7;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    transition: all 0.2s ease;
+  }
   main #hero {
     width: 90vw;
     margin: auto;
@@ -1108,7 +1120,7 @@ main footer #botArea #socials a:hover {
     display: grid;
     gap: 32px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20vh 30vh 50vh 30vh;
+    grid-template-rows: 25vh 30vh 50vh 30vh;
     grid-template-areas: "header header" "box1 box1" "box2 box2" "bottom bottom";
   }
   main #hero header {
@@ -1117,6 +1129,10 @@ main footer #botArea #socials a:hover {
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 3vh 1vw;
+    margin-top: 10px;
+    background-color: #ddeaff;
+    border-radius: 10px;
   }
   main #hero header .logo {
     display: flex;
@@ -1145,7 +1161,7 @@ main footer #botArea #socials a:hover {
   }
   main #hero header #anchors ul li a {
     color: rgb(78, 78, 78);
-    font-size: 14px;
+    font-size: 13px;
   }
   main #hero header .btns {
     display: flex;
@@ -1166,11 +1182,14 @@ main footer #botArea #socials a:hover {
   main #hero #box1 h1 {
     font-weight: 400;
     font-size: 3.5rem;
+    font-size: 3rem;
     width: 80vw;
+    width: 100%;
   }
   main #hero #box1 p {
     font-size: 1.5rem;
     width: 80vw;
+    width: 100%;
     color: rgb(78, 78, 78);
   }
   main #hero #box1 .btns {
@@ -1182,8 +1201,8 @@ main footer #botArea #socials a:hover {
     gap: 15px;
   }
   main #hero #box1 .btns button {
-    font-size: 14px;
-    padding: 10px 20px;
+    font-size: 12px;
+    padding: 8px 18px;
   }
   main #hero #box2 {
     grid-area: box2;
@@ -1213,21 +1232,27 @@ main footer #botArea #socials a:hover {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
     align-items: center;
   }
   main #hero #bottom #firsttwo div,
   main #hero #bottom #secondtwo div {
     width: 30vw;
+    width: 35vw;
   }
   main #hero #bottom #firsttwo div h1,
   main #hero #bottom #secondtwo div h1 {
     font-weight: 400;
     font-size: 4rem;
+    font-size: 3rem;
   }
   main #hero #bottom #firsttwo div p,
   main #hero #bottom #secondtwo div p {
     width: 80%;
+    width: 80%;
     font-size: 1.5rem;
+    font-size: 1.3rem;
     color: rgb(147, 147, 147);
   }
   .heading {
@@ -1248,6 +1273,7 @@ main footer #botArea #socials a:hover {
   }
   .midTxt1 h1 {
     font-size: 2.5rem;
+    font-size: 2.3rem;
     width: 100%;
     font-weight: 400;
   }
@@ -1265,13 +1291,15 @@ main footer #botArea #socials a:hover {
     gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr;
-    grid-template-rows: 15vh 1fr 1fr 80vh 10vh;
+    grid-template-rows: 15vh 1fr 1fr 50vh 10vh;
+    grid-template-rows: 15vh 0.7fr 1fr 50vh 10vh;
     grid-template-areas: "heading" "midTxt1" "midTxt2" "midImg" "bot";
   }
   main #expertise #midImg {
     grid-area: midImg;
     width: 90vw;
     height: 80vh;
+    height: 50vh;
     border-radius: 15px;
     margin: 0px auto;
   }
@@ -1290,7 +1318,9 @@ main footer #botArea #socials a:hover {
   }
   main #expertise #bot button {
     font-size: 16px;
+    font-size: 14px;
     padding: 10px 20px;
+    padding: 8px 18px;
   }
   main #services {
     width: 90vw;
@@ -1305,13 +1335,16 @@ main footer #botArea #socials a:hover {
   main #services #first {
     margin-bottom: 5vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   main #services #first .midTxt1 {
     width: 40vw;
+    width: 100%;
   }
   main #services #first .midTxt2 {
     width: 40vw;
+    width: 100%;
   }
   main #services #second {
     display: flex;
@@ -1335,6 +1368,7 @@ main footer #botArea #socials a:hover {
     width: 40vw;
     width: 100%;
     font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
   }
   main #services #second div div {
@@ -1344,14 +1378,17 @@ main footer #botArea #socials a:hover {
     gap: 1.5vh;
   }
   main #services #second div div p {
+    font-size: 12px;
     width: 90%;
     color: rgb(156, 156, 156);
   }
   main #services #second div div button {
-    height: 40px;
+    height: 50px;
     width: 100px;
+    width: 50px;
     padding: 5px 10px 5px 10px;
     border-radius: 20px;
+    border-radius: 50%;
     font-size: 18px;
   }
   main #services #second div div button:hover {
@@ -1410,6 +1447,7 @@ main footer #botArea #socials a:hover {
   }
   main #portfolio #projects .project {
     width: 80vw;
+    width: 90vw;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1439,6 +1477,7 @@ main footer #botArea #socials a:hover {
   }
   main #portfolio #projects .project .capsules span {
     font-size: 1.2rem;
+    font-size: 1.1rem;
     background-color: #cfddfe;
     border-radius: 20px;
     padding: 5px 10px;
@@ -1471,12 +1510,13 @@ main footer #botArea #socials a:hover {
   main #logoipsum #left #mid p {
     color: #000000;
     font-size: 16px;
+    font-size: 13px;
   }
   main #logoipsum #left #bot {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 1vw;
+    gap: 3vw;
   }
   main #logoipsum #left #bot h1 {
     font-weight: 400;
@@ -1489,6 +1529,7 @@ main footer #botArea #socials a:hover {
   main #logoipsum #right {
     width: 45vw;
     width: 80vw;
+    width: 90vw;
     height: 80%;
   }
   main #logoipsum #right img {
@@ -1516,13 +1557,17 @@ main footer #botArea #socials a:hover {
     align-items: center;
   }
   main #blog div button {
+    width: 30vw;
     font-size: 14px;
+    font-size: 12px;
     padding: 10px 20px;
+    padding: 8px 18px;
   }
   main #blog #cards {
     display: flex;
     flex-direction: column;
     gap: 3vh;
+    gap: 6vh;
     justify-content: center;
     align-items: center;
   }
@@ -1533,6 +1578,7 @@ main footer #botArea #socials a:hover {
     gap: 10px;
     width: 43vw;
     width: 80vw;
+    width: 90vw;
     border-radius: 1vh;
   }
   main #blog #cards .card img {
@@ -1542,13 +1588,14 @@ main footer #botArea #socials a:hover {
     border-radius: 10px;
   }
   main #blog #cards .card h1 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
   }
   main #blog #cards .card p {
     font-size: 14px;
     color: rgb(138, 138, 138);
     width: 80vw;
+    width: 90vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1599,11 +1646,11 @@ main footer #botArea #socials a:hover {
     gap: 1vh;
   }
   main #contactus #contact .down p {
-    font-size: 16px;
+    font-size: 15px;
     color: rgb(157, 157, 157);
   }
   main #contactus #contact .down h1 {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
   }
   main #contactus #contact .down ul {
@@ -1682,6 +1729,7 @@ main footer #botArea #socials a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 5vh;
   }
   main footer #topArea {
     display: flex;
@@ -1754,8 +1802,10 @@ main footer #botArea #socials a:hover {
   }
   main footer #botArea {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
     width: 80vw;
     width: 90vw;
     margin: 5rem auto 1.5rem auto;
@@ -1766,19 +1816,13 @@ main footer #botArea #socials a:hover {
   }
   main footer #botArea #region i {
     font-size: 16px;
-    color: white;
     cursor: pointer;
   }
-  main footer #botArea #region i:hover {
-    color: rgb(130, 130, 130);
-  }
   main footer #botArea #region p {
-    color: white;
     font-size: 1.3rem;
   }
   main footer #botArea #copyright p {
     font-size: 1.3rem;
-    color: white;
   }
   main footer #botArea #socials {
     display: flex;
@@ -1789,13 +1833,9 @@ main footer #botArea #socials a:hover {
   }
   main footer #botArea #socials a i {
     font-size: 16px;
-    color: white;
     padding: 0.4rem;
     border-radius: 50%;
     border: 1px solid rgb(107, 107, 107);
-  }
-  main footer #botArea #socials a i:hover {
-    color: rgb(196, 196, 196);
   }
   main footer #botArea #socials a:hover {
     transform: scale(1.2);
